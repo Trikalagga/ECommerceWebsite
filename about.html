@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
 <!-------Upper boundary   Purchase or refund--------------->
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -94,33 +94,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag("event", "view_item", {
-  currency: "USD",
-  value: 30.03,
-  items: [
-    {
-      item_id: "SKU_12345",
-      item_name: "Stan and Friends Tee",
-      affiliation: "Google Merchandise Store",
-      coupon: "SUMMER_FUN",
-      discount: 2.22,
-      index: 0,
-      item_brand: "Google",
-      item_category: "Apparel",
-      item_category2: "Adult",
-      item_category3: "Shirts",
-      item_category4: "Crew",
-      item_category5: "Short sleeve",
-      item_list_id: "related_products",
-      item_list_name: "Related Products",
-      item_variant: "green",
-      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 10.01,
-      quantity: 3
-    }
-  ]
-});
 
+        gtag('config', 'G-E6ZBEQ6F3H');
+    </script>
+</head>
+<body>
+    <div>Initiate checkout process</div>
+    <button> Checkout</button>
+    <script>       
+    gtag("event", "purchase", {
+    transaction_id: "T_12345",
+    // Sum of (price * quantity) for all items.
+    value: 72.05,
+    tax: 3.60,
+    shipping: 5.99,
+    currency: "USD",
+    coupon: "SUMMER_SALE",
+</head>
+  items: [
+        // If someone purchases more than one item,
+        // you can add those items to the items array
+         {
+          item_id: "12345",
+          item_name: "Classic Crocs",
+          affiliation: "Google Merchandise Store",
+          coupon: "SUMMER_FUN",
+          discount: 2.22,
+          index: 0,
+          item_brand: "Crocs Lifestyle",
+          item_category1: "Men",
+          item_category2: "Women",
+          item_color: "Swan White",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          price: 29.99,
+          quantity: 3
+        }]
+    });
 <!-------Lower boundary   Purchase or refund--------------->
 
 
